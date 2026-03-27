@@ -18,7 +18,6 @@ Write a program that:
    - The local part (before @) must be between 1-64 characters
    - The domain part (after @) must contain at least one dot
    - The domain extension (after final dot) must be 2-6 characters
-   - The domain extension must only contain letters
 
 **Example:**
 ```
@@ -29,9 +28,6 @@ Valid
 **Invalid Examples:**
 ```
 Input an email: john.doe@example
-Invalid
-
-Input an email: john..doe@example.com
 Invalid
 
 Input an email: @example.com
@@ -53,16 +49,15 @@ Enhance the program to handle exceptions and domain-specific validation rules:
 
 1. Keep all validation from Option 1, but now output which rule failed:
    - If invalid, output: "Invalid: [reason]"
-   - Possible reasons: "Missing @", "Multiple @", "Starts or ends with dot", "Contains spaces", "Local part too long", "Local part too short", "No dot in domain", "Invalid domain extension length", "Domain extension contains non-letters"
-
+   - Possible reasons: "Missing @", "Multiple @", "Starts or ends with dot", "Contains spaces", "Local part too long", "Local part too short", "No dot in domain", "Invalid domain extension length"
+     
 2. Add these exceptions to the basic rules:
    - **Exception A**: Subdomains are allowed (e.g., mail.google.com is valid)
-   - **Exception B**: Numbers are allowed in the local part and domain name (but NOT in the extension)
-   - **Exception C**: The characters + and _ are allowed in the local part only
-   - **Exception D**: Gmail addresses may have dots removed automatically (treat john.doe@gmail.com and johndoe@gmail.com as equivalent for validation purposes)
+   - **Exception B**: The characters + and _ are allowed in the local part only (follows same rules at .)
+   - **Exception C**: Gmail addresses may have dots removed automatically (treat john.doe@gmail.com and johndoe@gmail.com as equivalent for validation purposes)
 
 3. Handle edge cases:
-   - If Exception D applies, output the normalized version: "Valid (Gmail normalized)"
+   - If Exception C applies, output the normalized version: "Valid (Gmail normalized)"
    - If multiple exceptions apply, still output "Valid"
    - Validate that exceptions don't allow invalid characters in restricted areas
 

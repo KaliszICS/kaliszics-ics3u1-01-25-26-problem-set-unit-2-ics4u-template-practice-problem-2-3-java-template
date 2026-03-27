@@ -1,4 +1,4 @@
-# Problem Set Unit 2: Email Validator and Parser
+# Problem Set Unit 3: Email Validator and Parser
 
 In this problem set, you will create a program that validates email addresses according to specific rules, extracts components, and formats them according to different domain requirements.
 

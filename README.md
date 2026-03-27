@@ -119,15 +119,3 @@ jane.doe@gmail.com: Valid (Gmail normalized) | Local: jane.doe | Domain: gmail.c
 - Modify your existing code rather than starting from scratch
 
 ---
-
-## Grading Rubric
-
-| Criteria | Points |
-|----------|--------|
-| Correct validation logic and rule ordering | 30 |
-| Proper exception handling (Option 2+) | 20 |
-| Input parsing and multiple email handling (Option 3) | 15 |
-| Code organization and avoiding repetition | 15 |
-| Comments and documentation | 10 |
-| Edge case handling | 10 |
-| **Total** | **100** |

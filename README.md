@@ -71,9 +71,6 @@ Valid
 
 Input an email: jane.doe@gmail.com
 Valid (Gmail normalized)
-
-Input an email: invalid@domain.5yz
-Invalid: Domain extension contains non-letters
 ```
 
 **Requirements:**
